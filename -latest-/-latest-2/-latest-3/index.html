@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR Code Generator</title>
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- QRious library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+</head>
+<body>
+  <nav>
+    <div class="hamburger" id="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <ul id="navMenu">
+      <li><a href="#home" onclick="showPage('qrCodePage')">Home</a></li>
+      <li><a href="#about" onclick="showPage('aboutPage')">About</a></li>
+      <li><a href="#contact" onclick="showPage('contactPage')">Contact</a></li>
+      <li><a href="#explore" onclick="showPage('explorePage')">Explore</a></li>
+    </ul>
+  </nav>
+
+  <div class="main">
+    <div id="qrCodePage" class="qr-code-container">
+      <h1>QR Code Generator</h1>
+      <div id="dropArea">Drag &amp; Drop Text, PDFs, or Word Files Here</div>
+      <textarea id="qrInput" class="form-control" placeholder="Paste text or URL here" rows="3"></textarea>
+      <button id="generateQr" class="btn btn-primary mt-2">Generate QR Code</button>
+      <input type="file" id="fileInput" style="display:none;" />
+      <button id="browseFiles" class="btn btn-secondary mt-2">Browse Files</button>
+      <canvas id="qrCanvas" width="150" height="150"></canvas>
+      <div id="downloadContainer" style="display:none; margin-top: 20px;">
+        <button id="downloadQr" class="btn btn-success">Download QR Code</button>
+      </div>
+      </div>
+    </div>
+
+    <div id="aboutPage" class="about-container" style="display:none;">
+      <h1>About Us</h1>
+      <p>Welcome to our QR Code Generator! We are a dedicated team of developers passionate about providing tools that make life easier and more efficient.</p>
+      <p>Our QR Code Generator allows you to create custom QR codes for any text or URL. Whether you're promoting a business, sharing contact information, or creating unique experiences, we've got you covered!</p>
+      <p>Thank you for using our service!</p>
+    </div>
+
+    <div id="contactPage" class="contact-container" style="display:none;">
+      <h1>Contact Us</h1>
+      <p>You can reach us through the following platforms:</p>
+      <p>
+        <a href="https://www.instagram.com/span.iard._" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      </p>
+      <p>
+        <a href="https://github.com/ebrainedtech" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      </p>
+      <p>
+        <a href="https://wa.me/254705743454" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </p>
+      <p>Location: Nairobi, Ruaka</p>
+    </div>
+
+    <div id="explorePage" class="explore-container" style="display:none;">
+      <h1>Explore</h1>
+      <p>Discover more features and functionalities here.</p>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <p>&copy; 2025 QR Code Generator. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/span.iard._" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/ebrainedtech" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://wa.me/254705743454" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+<script>
+  
